@@ -1,9 +1,5 @@
 import { useRef, useEffect, useCallback } from 'react';
 
-function map(x: number, a: number, b: number, c: number, d: number): number {
-  return (x - a) * (d - c) / (b - a) + c;
-}
-
 // Manual text splitting into chars (avoiding splitting npm issues)
 function splitTextIntoChars(element: HTMLElement): HTMLSpanElement[] {
   const text = element.textContent || '';
@@ -79,18 +75,15 @@ export default function VelocityStatement() {
       rafRef.current = requestAnimationFrame(render);
 
       const scroll = scrollCache.current;
-      const distance = scroll.current - scroll.cache;
-      scroll.cache += (scroll.current - scroll.cache) * 0.1;
+      scroll.cache += (scroll.current - scroll.cache) * 0.08;
 
-      const translateY = ((scroll.cache - (heightRef.current / 2 - heightRef.current / 2)) / heightRef.current) - (rectTopRef.current / heightRef.current);
-      const scaleY = map(Math.abs(distance), 0, 150, 1, 1.6);
+      const translateY =
+        (scroll.cache - (heightRef.current / 2 - heightRef.current / 2)) / heightRef.current -
+        rectTopRef.current / heightRef.current;
 
+      // Very subtle parallax only — no bounce/scale effect
       for (const char of charsRef.current) {
-        if (Math.abs(distance) < 5) {
-          char.style.transform = `translateY(${translateY * 40}px)`;
-        } else {
-          char.style.transform = `translateY(${translateY * 40}px) scaleY(${scaleY})`;
-        }
+        char.style.transform = `translateY(${translateY * 8}px)`;
       }
     };
 
@@ -109,13 +102,53 @@ export default function VelocityStatement() {
       className="relative bg-navy-100 flex items-center justify-center overflow-hidden"
       style={{ height: '150vh' }}
     >
-      <div className="sticky top-0 h-screen flex items-center justify-center">
+      {/* Subtle wave layers behind the text */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <svg
+          className="absolute bottom-0 left-0 w-full h-full opacity-[0.08]"
+          viewBox="0 0 1440 800"
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0,400 C240,500 480,300 720,400 C960,500 1200,300 1440,400 L1440,800 L0,800 Z"
+            fill="currentColor"
+            className="text-ice"
+          />
+        </svg>
+        <svg
+          className="absolute bottom-0 left-0 w-full h-full opacity-[0.06]"
+          viewBox="0 0 1440 800"
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0,500 C360,400 720,600 1080,500 C1260,450 1350,480 1440,500 L1440,800 L0,800 Z"
+            fill="currentColor"
+            className="text-ice"
+          />
+        </svg>
+        <svg
+          className="absolute top-0 left-0 w-full h-full opacity-[0.04]"
+          viewBox="0 0 1440 800"
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0,200 C320,300 640,100 960,200 C1120,250 1280,220 1440,200 L1440,0 L0,0 Z"
+            fill="currentColor"
+            className="text-ice"
+          />
+        </svg>
+      </div>
+
+      <div className="sticky top-0 h-screen flex items-center justify-center z-10">
         <div
           ref={textRef}
           className="kinetic-text"
-          style={{ fontSize: 'clamp(3rem, 12vw, 14rem)' }}
+          style={{ fontSize: 'clamp(3rem, 11vw, 13rem)' }}
         >
-          SOVEREIGN
+          SOVEREIGN AI
         </div>
       </div>
     </section>
