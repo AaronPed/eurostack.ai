@@ -77,7 +77,7 @@ export default function Footer() {
 
               <div>
                 <p className="font-mono text-xs text-slate-euro uppercase tracking-widest mb-3">
-                  Certifications
+                  Planned Certifications
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <span className="flex items-center gap-1.5 text-xs text-slate-euro border border-slate-euro/30 px-2 py-1">
