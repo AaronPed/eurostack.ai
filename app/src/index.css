@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'Geist';
+  src: url('/fonts/Geist-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('/fonts/GeistMono-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 60% 8%;
+    --foreground: 200 100% 96%;
+    --card: 210 60% 8%;
+    --card-foreground: 200 100% 96%;
+    --popover: 210 60% 8%;
+    --popover-foreground: 200 100% 96%;
+    --primary: 200 100% 96%;
+    --primary-foreground: 210 60% 8%;
+    --secondary: 210 30% 15%;
+    --secondary-foreground: 200 100% 96%;
+    --muted: 210 30% 15%;
+    --muted-foreground: 200 20% 55%;
+    --accent: 0 100% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 100% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 200 20% 30%;
+    --input: 200 20% 30%;
+    --ring: 0 100% 60%;
+    --radius: 0.25rem;
+    --sidebar-background: 210 60% 8%;
+    --sidebar-foreground: 200 100% 96%;
+    --sidebar-primary: 0 100% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 30% 15%;
+    --sidebar-accent-foreground: 200 100% 96%;
+    --sidebar-border: 200 20% 30%;
+    --sidebar-ring: 0 100% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+  body {
+    @apply bg-navy-100 text-ice antialiased;
+    font-family: 'Geist', 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply border border-ice text-ice px-8 py-3 font-mono text-sm tracking-widest uppercase transition-all duration-300;
+  }
+  .btn-primary:hover {
+    @apply bg-alert text-white border-alert;
+  }
+
+  .section-padding {
+    @apply px-6 md:px-12 lg:px-20 xl:px-32;
+  }
+
+  .kinetic-text {
+    white-space: nowrap;
+    will-change: transform;
+    text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
+    color: #EBF7FF;
+  }
+
+  .kinetic-text .word {
+    display: inline-block;
+    overflow: hidden;
+    margin: 0 1vw;
+  }
+
+  .kinetic-text .char {
+    display: inline-block;
+    will-change: transform;
+    transform-origin: 50% 0%;
+  }
+}
