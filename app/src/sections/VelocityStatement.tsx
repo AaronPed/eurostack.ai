@@ -1,4 +1,5 @@
 import { useRef, useEffect, useCallback } from 'react';
+import SovereignDataStreams from '../components/SovereignDataStreams';
 
 // Manual text splitting into chars (avoiding splitting npm issues)
 function splitTextIntoChars(element: HTMLElement): HTMLSpanElement[] {
@@ -102,44 +103,9 @@ export default function VelocityStatement() {
       className="relative bg-navy-100 flex items-center justify-center overflow-hidden"
       style={{ height: '150vh' }}
     >
-      {/* Subtle wave layers behind the text */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <svg
-          className="absolute bottom-0 left-0 w-full h-full opacity-[0.08]"
-          viewBox="0 0 1440 800"
-          preserveAspectRatio="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M0,400 C240,500 480,300 720,400 C960,500 1200,300 1440,400 L1440,800 L0,800 Z"
-            fill="currentColor"
-            className="text-ice"
-          />
-        </svg>
-        <svg
-          className="absolute bottom-0 left-0 w-full h-full opacity-[0.06]"
-          viewBox="0 0 1440 800"
-          preserveAspectRatio="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M0,500 C360,400 720,600 1080,500 C1260,450 1350,480 1440,500 L1440,800 L0,800 Z"
-            fill="currentColor"
-            className="text-ice"
-          />
-        </svg>
-        <svg
-          className="absolute top-0 left-0 w-full h-full opacity-[0.04]"
-          viewBox="0 0 1440 800"
-          preserveAspectRatio="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M0,200 C320,300 640,100 960,200 C1120,250 1280,220 1440,200 L1440,0 L0,0 Z"
-            fill="currentColor"
-            className="text-ice"
-          />
-        </svg>
+      {/* Data-stream waves matching the EUROPEAN INFERENCE hero */}
+      <div className="absolute inset-0 z-0">
+        <SovereignDataStreams slowMode />
       </div>
 
       <div className="sticky top-0 h-screen flex items-center justify-center z-10">
