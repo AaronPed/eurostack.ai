@@ -108,6 +108,18 @@ export default function VelocityStatement() {
         <SovereignDataStreams slowMode />
       </div>
 
+      {/* Extra dense stream layer focused below the text to fill deadzone */}
+      <div
+        className="absolute left-0 right-0 bottom-0 z-0 pointer-events-none"
+        style={{
+          height: '55%',
+          maskImage: 'linear-gradient(to top, black 30%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to top, black 30%, transparent 100%)',
+        }}
+      >
+        <SovereignDataStreams slowMode />
+      </div>
+
       <div className="sticky top-0 h-screen flex items-center justify-center z-10">
         <div
           ref={textRef}
