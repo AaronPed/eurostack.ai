@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" fill="#071A2E"/>
+  <text
+    x="32"
+    y="38"
+    text-anchor="middle"
+    font-family="'Times New Roman', 'Playfair Display', Georgia, serif"
+    font-size="28"
+    font-weight="400"
+    fill="#EBF7FF"
+    letter-spacing="1"
+  >EU</text>
+  <!-- Corner brackets -->
+  <path d="M8 16 V8 H16" stroke="#EBF7FF" stroke-width="1.2" fill="none" opacity="0.9"/>
+  <path d="M48 8 H56 V16" stroke="#EBF7FF" stroke-width="1.2" fill="none" opacity="0.9"/>
+  <path d="M8 48 V56 H16" stroke="#EBF7FF" stroke-width="1.2" fill="none" opacity="0.9"/>
+  <path d="M48 56 H56 V48" stroke="#EBF7FF" stroke-width="1.2" fill="none" opacity="0.9"/>
+  <!-- Accent crosshair ticks -->
+  <path d="M32 4 V10" stroke="#FF3333" stroke-width="1" fill="none" opacity="0.8"/>
+  <path d="M32 54 V60" stroke="#FF3333" stroke-width="1" fill="none" opacity="0.8"/>
+  <path d="M4 32 H10" stroke="#FF3333" stroke-width="1" fill="none" opacity="0.8"/>
+  <path d="M54 32 H60" stroke="#FF3333" stroke-width="1" fill="none" opacity="0.8"/>
+</svg>
