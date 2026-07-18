@@ -3,7 +3,7 @@ import { Shield, Lock, Server, Award, Globe, Cpu } from 'lucide-react';
 const certifications = [
   { icon: Shield, name: 'ISO 27001', desc: 'Building toward Information Security Management certification.' },
   { icon: Lock, name: 'SOC 2 Type II', desc: 'Targeting Service Organization Controls compliance.' },
-  { icon: Server, name: 'GDPR', desc: 'Designing infrastructure for EU Data Protection Regulation readiness.' },
+  { icon: Server, name: 'GDPR + FADP', desc: 'Designing infrastructure for EU and Swiss data protection regulation readiness.' },
   { icon: Award, name: 'ISMS', desc: 'Aligning with core BSI security frameworks.' },
   { icon: Globe, name: 'BSI', desc: 'Aligning with Bundesamt fuer Sicherheit in der Informationstechnik frameworks.' },
   { icon: Cpu, name: 'NATO SECRET', desc: 'Planning clearance capability for classified workloads.' },

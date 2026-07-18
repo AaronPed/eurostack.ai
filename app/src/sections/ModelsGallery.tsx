@@ -9,7 +9,7 @@ const models = [
     name: 'GLM-5.2',
     image: 'images/fiber-optics.jpg',
     params: '744B Total / 40B Active',
-    latency: '48ms',
+    license: 'MIT',
     description:
       'Z.ai flagship — SOTA on SWE-Bench Pro for agentic coding. 1M-token context, MIT license. The best open-weight coding model of 2026.',
     benchmark: 'SWE-Bench Pro: SOTA',
@@ -18,7 +18,7 @@ const models = [
     name: 'DeepSeek V4 Pro',
     image: 'images/prism.jpg',
     params: '1.6T Total / 49B Active',
-    latency: '78ms',
+    license: 'MIT',
     description:
       'Frontier MoE with 1M context and unmatched reasoning. Leads all models on LiveCodeBench. MIT license.',
     benchmark: 'LiveCodeBench: 93.5%',
@@ -27,7 +27,7 @@ const models = [
     name: 'DeepSeek V4 Flash',
     image: 'images/hyperloop.jpg',
     params: '284B Total / 13B Active',
-    latency: '28ms',
+    license: 'MIT',
     description:
       'Speed-optimized MoE variant — runs on a single H100. 1M context, best cost-efficiency for high-throughput workloads.',
     benchmark: 'LiveCodeBench: 91.6%',
@@ -36,19 +36,19 @@ const models = [
     name: 'Mistral Large 3',
     image: 'images/datacenter.jpg',
     params: '675B Total / 41B Active',
-    latency: '42ms',
+    license: 'Apache 2.0',
     description:
       'European flagship — 256K context, native multimodal, Apache 2.0. GPU-optimized for single-node deployment.',
     benchmark: 'MMLU-Pro: 73.1%',
   },
   {
-    name: 'Llama 4 Scout',
-    image: 'images/fiber-optics.jpg',
-    params: '109B Total / 17B Active',
-    latency: '35ms',
+    name: 'Qwen3-VL',
+    image: 'images/prism.jpg',
+    params: '235B Total / 22B Active',
+    license: 'Apache 2.0',
     description:
-      'Meta 2026 release — 10M token context window. Fits on a single GPU. Native multimodal text + vision.',
-    benchmark: 'Context: 10M tokens',
+      'Alibaba multimodal flagship — Apache 2.0 vision-language model with strong reasoning and long-context understanding. No EU usage restrictions.',
+    benchmark: 'Vision: SOTA-class',
   },
 ];
 
@@ -178,8 +178,8 @@ export default function ModelsGallery() {
               </p>
               <div className="flex items-center gap-6">
                 <div>
-                  <p className="font-mono text-xs text-slate-euro uppercase tracking-wider">Latency</p>
-                  <p className="font-mono text-lg text-ice">{model.latency}</p>
+                  <p className="font-mono text-xs text-slate-euro uppercase tracking-wider">License</p>
+                  <p className="font-mono text-lg text-ice">{model.license}</p>
                 </div>
                 <div>
                   <p className="font-mono text-xs text-slate-euro uppercase tracking-wider">Benchmark</p>

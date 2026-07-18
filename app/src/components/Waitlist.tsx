@@ -83,7 +83,7 @@ export default function Waitlist({ title, eyebrow = 'API Access' }: WaitlistProp
             {
               icon: Shield,
               title: 'Compliance Needs',
-              desc: 'Required certifications (GDPR, ISO 27001, etc.) and any clearance requirements.',
+              desc: 'Required certifications (GDPR, FADP, ISO 27001, etc.) and any clearance requirements.'
             },
             {
               icon: Clock,

@@ -31,7 +31,7 @@ export default function GlobalExecution() {
           </h2>
           <p className="text-slate-euro text-lg leading-relaxed mb-10 max-w-xl">
             Our inference clusters will operate from Tier IV datacenters in Zurich, Frankfurt, and Paris.
-            Your data will never leave European jurisdiction. Fully compliant with GDPR, ISO 27001,
+            Your data will never leave European jurisdiction. Fully compliant with GDPR, FADP, ISO 27001,
             and SOC 2 Type II standards. No Cloud Act exposure. No US regulatory interference.
           </p>
 

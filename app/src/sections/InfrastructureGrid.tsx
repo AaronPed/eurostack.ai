@@ -9,9 +9,9 @@ const gridItems = [
   },
   {
     icon: Lock,
-    metric: 'GDPR',
+    metric: 'GDPR + FADP',
     label: 'Ready',
-    description: 'Designing for full EU data protection regulation readiness. No data will leave Europe.',
+    description: 'Designing for EU and Swiss data protection regulation readiness. No data will leave Europe.',
   },
   {
     icon: Server,
@@ -35,7 +35,7 @@ const gridItems = [
     icon: Cpu,
     metric: 'H100',
     label: 'GPUs',
-    description: 'Latest NVIDIA H100 clusters for maximum inference throughput.',
+    description: 'NVIDIA H100/B200 clusters for maximum inference throughput.',
   },
   {
     icon: Zap,

@@ -13,7 +13,7 @@ const plans = [
       'Standard API rate limits',
       'Community support',
       'Zurich & Frankfurt regions',
-      'GDPR compliant by default',
+      'GDPR + FADP compliant by default',
       '99.9% uptime SLA',
     ],
     excluded: [

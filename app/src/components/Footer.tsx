@@ -87,7 +87,7 @@ export default function Footer() {
                     <Lock size={12} /> SOC 2
                   </span>
                   <span className="flex items-center gap-1.5 text-xs text-slate-euro border border-slate-euro/30 px-2 py-1">
-                    <Server size={12} /> GDPR
+                    <Server size={12} /> GDPR + FADP
                   </span>
                   <span className="flex items-center gap-1.5 text-xs text-slate-euro border border-slate-euro/30 px-2 py-1">
                     <Cpu size={12} /> ISMS

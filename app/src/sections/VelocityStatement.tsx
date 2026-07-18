@@ -120,7 +120,10 @@ export default function VelocityStatement() {
         <SovereignDataStreams slowMode />
       </div>
 
-      <div className="sticky top-0 h-screen flex items-center justify-center z-10">
+      <div className="sticky top-0 h-screen flex flex-col items-center justify-center z-10 text-center">
+        <p className="font-mono text-xs text-alert uppercase tracking-[0.3em] mb-6">
+          Our Mission
+        </p>
         <div
           ref={textRef}
           className="kinetic-text"
@@ -128,6 +131,9 @@ export default function VelocityStatement() {
         >
           SOVEREIGN AI
         </div>
+        <p className="mt-8 font-mono text-slate-euro text-sm tracking-widest uppercase max-w-xl">
+          European infrastructure. European jurisdiction. European control.
+        </p>
       </div>
     </section>
   );

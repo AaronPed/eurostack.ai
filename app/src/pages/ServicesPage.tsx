@@ -15,13 +15,13 @@ const services = [
       'Auto-scaling compute clusters',
       'Multi-region failover',
       'Real-time usage analytics',
-      'GDPR-compliant by design',
+      'GDPR + FADP-compliant by design',
     ],
     details: [
       { icon: Shield, label: 'Security', value: 'ISO 27001 & SOC 2' },
       { icon: Server, label: 'Latency', value: '< 50ms average' },
       { icon: Clock, label: 'Uptime', value: '99.99% SLA' },
-      { icon: Lock, label: 'Compliance', value: 'GDPR, ISMS' },
+      { icon: Lock, label: 'Compliance', value: 'GDPR, FADP, ISMS' }
     ],
     cta: 'GET API KEY',
     ctaLink: '/contact',
