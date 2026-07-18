@@ -1,5 +1,14 @@
 import { Link } from 'react-router-dom';
-import { Code, Cloud, Wrench, ArrowRight, Shield, Server, Clock, Lock } from 'lucide-react';
+import { Code, Cloud, Wrench, ArrowRight, Shield, Server, Clock, Lock, Sparkles, Boxes, Layers, Target } from 'lucide-react';
+
+const serviceImage: Record<string, string> = {
+  api: 'fiber-optics',
+  'private-cloud': 'datacenter',
+  'white-glove': 'hyperloop',
+  'fine-tuning': 'prism',
+  'custom-hosting': 'datacenter',
+  'batch-embeddings': 'fiber-optics',
+};
 
 const services = [
   {
@@ -74,6 +83,78 @@ const services = [
     cta: 'CONTACT FDE TEAM',
     ctaLink: '/contact',
   },
+  {
+    id: 'fine-tuning',
+    icon: Sparkles,
+    title: 'FINE-TUNING & LORA',
+    subtitle: 'Custom Model Adaptation',
+    description:
+      'Adapt open-source models to your domain with supervised fine-tuning and LoRA. We manage the training pipeline, dataset validation, and deployment — all on European infrastructure.',
+    features: [
+      'Full fine-tuning & LoRA',
+      'Dataset curation & validation',
+      'RLHF alignment pipelines',
+      'Versioned model artifacts',
+      'A/B testing & evaluation',
+      'Deploy to API or private cluster',
+    ],
+    details: [
+      { icon: Target, label: 'Method', value: 'SFT & LoRA' },
+      { icon: Server, label: 'Base models', value: 'GLM, Mistral, Qwen' },
+      { icon: Clock, label: 'Turnaround', value: '1-2 weeks' },
+      { icon: Lock, label: 'Data', value: 'On-premise option' },
+    ],
+    cta: 'START A FINE-TUNE',
+    ctaLink: '/contact',
+  },
+  {
+    id: 'custom-hosting',
+    icon: Boxes,
+    title: 'CUSTOM MODEL HOSTING',
+    subtitle: 'Bring Your Own Weights',
+    description:
+      'Deploy your own checkpoints, domain-specific models, or fine-tuned weights on our sovereign infrastructure. We handle optimization, scaling, and serving so your team does not have to.',
+    features: [
+      'BYO weights & checkpoints',
+      'vLLM / TGI optimization',
+      'Quantization (GPTQ, AWQ)',
+      'Auto-scaling endpoints',
+      'Private endpoint option',
+      'Model versioning & rollback',
+    ],
+    details: [
+      { icon: Shield, label: 'Formats', value: 'Safetensors, GGUF' },
+      { icon: Server, label: 'Engines', value: 'vLLM, TGI' },
+      { icon: Clock, label: 'Deploy', value: '< 24 hours' },
+      { icon: Lock, label: 'Network', value: 'VPC or public' },
+    ],
+    cta: 'HOST YOUR MODEL',
+    ctaLink: '/contact',
+  },
+  {
+    id: 'batch-embeddings',
+    icon: Layers,
+    title: 'BATCH & EMBEDDINGS',
+    subtitle: 'High-Throughput Async Workloads',
+    description:
+      'Process large datasets, document collections, and embedding jobs asynchronously. Ideal for RAG pipelines, search indexes, and offline inference at scale.',
+    features: [
+      'Async batch jobs',
+      'Text & vision embeddings',
+      'JSONL / Parquet input',
+      'Queue-based processing',
+      'Result export to your cloud',
+      'Cost-optimized compute',
+    ],
+    details: [
+      { icon: Shield, label: 'Throughput', value: '1M+ tokens/min' },
+      { icon: Server, label: 'Input', value: 'JSONL, Parquet' },
+      { icon: Clock, label: 'SLA', value: '24h turnaround' },
+      { icon: Lock, label: 'Output', value: 'Encrypted export' },
+    ],
+    cta: 'REQUEST ACCESS',
+    ctaLink: '/contact',
+  },
 ];
 
 export default function ServicesPage() {
@@ -88,8 +169,9 @@ export default function ServicesPage() {
           SERVICES
         </h1>
         <p className="text-slate-euro text-lg max-w-2xl leading-relaxed">
-          Three tiers of sovereign AI infrastructure, from shared API access to fully managed
-          on-premise deployments. Every option guarantees your data never leaves European jurisdiction.
+          Sovereign AI infrastructure from shared API access to fully managed on-premise deployments,
+          custom model adaptation, and high-throughput batch workloads. Every option keeps your data
+          under European jurisdiction.
         </p>
       </section>
 
@@ -111,13 +193,7 @@ export default function ServicesPage() {
                 <div
                   className="relative aspect-video overflow-hidden border border-slate-euro/20"
                   style={{
-                    backgroundImage: `url(images/${
-                      service.id === 'api'
-                        ? 'fiber-optics'
-                        : service.id === 'private-cloud'
-                        ? 'datacenter'
-                        : 'hyperloop'
-                    }.jpg)`,
+                    backgroundImage: `url(images/${serviceImage[service.id]}.jpg)`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                   }}
