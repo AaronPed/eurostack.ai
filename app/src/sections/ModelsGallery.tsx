@@ -47,7 +47,7 @@ const models = [
     params: '235B Total / 22B Active',
     license: 'Apache 2.0',
     description:
-      'Alibaba multimodal flagship — Apache 2.0 vision-language model with strong reasoning and long-context understanding. No EU usage restrictions.',
+      'Alibaba multimodal flagship — Apache 2.0 vision-language model with strong reasoning and long-context understanding. Designed for multimodal agents and document understanding.',
     benchmark: 'Vision: SOTA-class',
   },
 ];
